@@ -7,7 +7,7 @@ The **map_O_spread** function is a super short "deep copy" function for ANY vari
 The idea comes from the copy of an array:
 ```
 array.map(O=>{
-  return [...el]
+  return [...O]
 })
 ```
 Notice the ```.map()``` method... The ```O``` argument... The *spread* operator.
