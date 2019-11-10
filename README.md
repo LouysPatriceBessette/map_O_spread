@@ -11,15 +11,15 @@ array.map(O=>{
 })
 ```
 Notice the ```.map()``` method... The ```O``` argument... The *spread* operator.
-Actually, **Map-O-Spread** is a a maple sugar brand: https://www.amazon.com/Spread-Pack-800g-6-49-shipping/dp/B00T2B9CD4
- heheh ;)
+Actually, **Map-O-Spread** is a a maple sugar brand: [Map-O-Spread on Amazon](https://www.amazon.com/Spread-Pack-800g-6-49-shipping/dp/B00T2B9CD4)
+ *heheh* ;)
  
 Now, the above is not a ***deep copy***, but a copy of the "1st level" of the variable.
 
 
 ## Why two functions? 
 I wanted it to be recursive AND to work for ALL variable structure.
-It worked well quite fast on nested arrays: https://repl.it/@Bes7weB/Map-o-Spread
+It worked well quite fast on nested arrays: [Map-o-Spread version 0](https://repl.it/@Bes7weB/Map-o-Spread)
 But failed with an object... So imagine with a complex object like:
 ```
 {
@@ -42,16 +42,17 @@ But failed with an object... So imagine with a complex object like:
 
 ## Why two functions?
 Additionnally... It got more complicated when I noticed that the JS ```typeof()``` was returning ***object*** for both *object* AND *arrays*!
-See here: https://repl.it/@Bes7weB/typeof-NOT-returning-the-correct-type
+See here: [typeof-NOT-returning-the-correct-type](https://repl.it/@Bes7weB/typeof-NOT-returning-the-correct-type)
 
-So I also made a ```getRealType()``` function to fix that problem *(I can't figure out why JS never fixed that* ***[1]*** *)*.
-That's why there is two functions in this map_O_spread.js file.
+*I can't figure out why JS never fixed that* ***[1]*** *Am I the first one to notice? It can't be!!!*
 
-And I left them as separate functions, since the getRealType() may also be useful alone.
+So I also made a ```getRealType()``` function to fix that problem.
+
+And I left them as separate functions, since the ```getRealType()``` may also be useful alone.
 
 ### Notes:
 
-***[1]*** Only tested in Chrome... I think it is a JS interpreter issue. It may not be an issue with other browsers.
+***[1]*** Only tested in Chrome. It *may be* a JS interpreter issue...
 
 
 ### === LICENCE : MIT
